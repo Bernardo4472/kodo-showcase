@@ -1,0 +1,290 @@
+/* ============================================
+   Forest Gradient Color Palette
+   ============================================ */
+
+/* CSS Custom Properties */
+:root {
+  /* Primary Colors */
+  --color-dark-charcoal: #1a1f1e;
+  --color-deep-forest: #2a3830;
+  --color-forest-green: #3d5545;
+  --color-moss-green: #4a6b52;
+  --color-sage-green: #5a8062;
+  --color-light-sage: #a5b898;
+  --color-mint-cream: #d4d9c8;
+  --color-warm-beige: #e8e4c8;
+  --color-pale-cream: #f2efd8;
+  
+  /* Gradient Stops */
+  --gradient-stop-1: #0d0f0e;
+  --gradient-stop-2: #1a1f1e;
+  --gradient-stop-3: #2a3830;
+  --gradient-stop-4: #3d5545;
+  --gradient-stop-5: #5a8062;
+  --gradient-stop-6: #a5b898;
+  --gradient-stop-7: #d4d9c8;
+  --gradient-stop-8: #e8e4c8;
+  
+  /* Semantic Color Names */
+  --color-primary: var(--color-forest-green);
+  --color-secondary: var(--color-sage-green);
+  --color-background-dark: var(--color-dark-charcoal);
+  --color-background-light: var(--color-pale-cream);
+  --color-accent: var(--color-warm-beige);
+  
+  /* Gradients */
+  --gradient-diagonal: linear-gradient(135deg, 
+    var(--gradient-stop-1) 0%, 
+    var(--gradient-stop-2) 20%, 
+    var(--gradient-stop-3) 35%, 
+    var(--gradient-stop-4) 50%, 
+    var(--gradient-stop-5) 65%, 
+    var(--gradient-stop-7) 85%, 
+    var(--gradient-stop-8) 100%
+  );
+  
+  --gradient-horizontal: linear-gradient(to right, 
+    var(--gradient-stop-1), 
+    var(--gradient-stop-2), 
+    var(--gradient-stop-3), 
+    var(--gradient-stop-4), 
+    var(--gradient-stop-5), 
+    var(--gradient-stop-7), 
+    var(--gradient-stop-8)
+  );
+  
+  --gradient-vertical: linear-gradient(to bottom, 
+    var(--gradient-stop-1), 
+    var(--gradient-stop-2), 
+    var(--gradient-stop-3), 
+    var(--gradient-stop-4), 
+    var(--gradient-stop-5), 
+    var(--gradient-stop-7), 
+    var(--gradient-stop-8)
+  );
+  
+  --gradient-radial: radial-gradient(circle, 
+    var(--gradient-stop-1), 
+    var(--gradient-stop-2), 
+    var(--gradient-stop-3), 
+    var(--gradient-stop-4), 
+    var(--gradient-stop-5), 
+    var(--gradient-stop-7), 
+    var(--gradient-stop-8)
+  );
+  
+  --gradient-dark: linear-gradient(135deg, 
+    var(--color-dark-charcoal), 
+    var(--color-deep-forest)
+  );
+  
+  --gradient-light: linear-gradient(135deg, 
+    var(--color-mint-cream), 
+    var(--color-pale-cream)
+  );
+  
+  --gradient-accent: linear-gradient(135deg, 
+    var(--color-forest-green), 
+    var(--color-sage-green)
+  );
+}
+
+/* ============================================
+   Background Color Utilities
+   ============================================ */
+
+.bg-dark-charcoal { background-color: var(--color-dark-charcoal); }
+.bg-deep-forest { background-color: var(--color-deep-forest); }
+.bg-forest-green { background-color: var(--color-forest-green); }
+.bg-moss-green { background-color: var(--color-moss-green); }
+.bg-sage-green { background-color: var(--color-sage-green); }
+.bg-light-sage { background-color: var(--color-light-sage); }
+.bg-mint-cream { background-color: var(--color-mint-cream); }
+.bg-warm-beige { background-color: var(--color-warm-beige); }
+.bg-pale-cream { background-color: var(--color-pale-cream); }
+
+/* ============================================
+   Text Color Utilities
+   ============================================ */
+
+.text-dark-charcoal { color: var(--color-dark-charcoal); }
+.text-deep-forest { color: var(--color-deep-forest); }
+.text-forest-green { color: var(--color-forest-green); }
+.text-moss-green { color: var(--color-moss-green); }
+.text-sage-green { color: var(--color-sage-green); }
+.text-light-sage { color: var(--color-light-sage); }
+.text-mint-cream { color: var(--color-mint-cream); }
+.text-warm-beige { color: var(--color-warm-beige); }
+.text-pale-cream { color: var(--color-pale-cream); }
+
+/* ============================================
+   Border Color Utilities
+   ============================================ */
+
+.border-dark-charcoal { border-color: var(--color-dark-charcoal); }
+.border-deep-forest { border-color: var(--color-deep-forest); }
+.border-forest-green { border-color: var(--color-forest-green); }
+.border-moss-green { border-color: var(--color-moss-green); }
+.border-sage-green { border-color: var(--color-sage-green); }
+.border-light-sage { border-color: var(--color-light-sage); }
+.border-mint-cream { border-color: var(--color-mint-cream); }
+.border-warm-beige { border-color: var(--color-warm-beige); }
+.border-pale-cream { border-color: var(--color-pale-cream); }
+
+/* ============================================
+   Gradient Background Utilities
+   ============================================ */
+
+.bg-gradient-diagonal { background: var(--gradient-diagonal); }
+.bg-gradient-horizontal { background: var(--gradient-horizontal); }
+.bg-gradient-vertical { background: var(--gradient-vertical); }
+.bg-gradient-radial { background: var(--gradient-radial); }
+.bg-gradient-dark { background: var(--gradient-dark); }
+.bg-gradient-light { background: var(--gradient-light); }
+.bg-gradient-accent { background: var(--gradient-accent); }
+
+/* ============================================
+   Component Classes
+   ============================================ */
+
+/* Buttons */
+.btn-primary {
+  background: var(--gradient-accent);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(61, 85, 69, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-forest-green);
+  border: 2px solid var(--color-forest-green);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: var(--color-forest-green);
+  color: white;
+}
+
+.btn-light {
+  background: var(--gradient-light);
+  color: var(--color-dark-charcoal);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-light:hover {
+  transform: translateY(-2px);
+}
+
+/* Cards */
+.card-dark {
+  background: var(--gradient-dark);
+  color: var(--color-pale-cream);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-light {
+  background: var(--gradient-light);
+  color: var(--color-dark-charcoal);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-accent {
+  background: var(--gradient-accent);
+  color: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(61, 85, 69, 0.3);
+}
+
+/* Hero Section */
+.hero-gradient {
+  background: var(--gradient-diagonal);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 60px 20px;
+}
+
+/* Text Gradient */
+.text-gradient {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Overlay */
+.overlay-dark {
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 31, 30, 0) 0%,
+    rgba(26, 31, 30, 0.8) 100%
+  );
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+.shadow-forest {
+  box-shadow: 0 10px 40px rgba(61, 85, 69, 0.2);
+}
+
+.shadow-dark {
+  box-shadow: 0 10px 40px rgba(26, 31, 30, 0.3);
+}
+
+.rounded-sm { border-radius: 4px; }
+.rounded { border-radius: 8px; }
+.rounded-lg { border-radius: 12px; }
+.rounded-xl { border-radius: 16px; }
+.rounded-2xl { border-radius: 24px; }
+.rounded-full { border-radius: 9999px; }
+
+/* ============================================
+   Animation Examples
+   ============================================ */
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-animate {
+  background: linear-gradient(
+    270deg,
+    var(--gradient-stop-1),
+    var(--gradient-stop-4),
+    var(--gradient-stop-7)
+  );
+  background-size: 200% 200%;
+  animation: gradient-shift 10s ease infinite;
+}
